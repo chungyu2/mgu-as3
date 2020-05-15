@@ -1,0 +1,40 @@
+{
+              "class": "Application",
+              "template": "generic",
+              "Application1VIP": {
+                             "class": "Service_HTTPS",
+                             "virtualAddresses": [
+                                           [""{{virtual_address}}],
+                             ],
+                             "virtualPort": 443,
+                             "profileTCP": {
+                                            "bigip": "/Common/mgu_tcp_optimized"
+              },
+                             "profileHTTP": {
+                                            "bigip": "/Common/mgu_http_basic"
+                            },
+                             "allowVlans": [{
+                                           "bigip": "/Common/<<vlan_name>>"
+                             }],
+                             "pool": "web_pool",
+                             "clientTLS": [{
+                                           "bigip": "/Common/mgu_default_serverssl"
+                             }],
+                             "serverTLS": [{
+                                           "bigip": "/Common/mgu_it_star_clientssl"
+                             }]
+              },
+              "web_pool": {
+                             "class": "Pool",
+                             "monitors": [
+                                           "http"
+                             ],
+                             "members": [{
+                                           "servicePort": {{port::integer}},
+                                           "serverAddresses": [
+                                                          "3.3.3.3",
+                                                          "3.3.3.4"
+                                           ]
+                             }]
+              }
+}
