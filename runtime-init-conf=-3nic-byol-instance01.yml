@@ -137,11 +137,13 @@ extension_services:
           license
         Common:
           class: Tenant
-          My_DbVariables:
+      My_DbVariables:
             class: DbVariables
             dhclient.mgmt: disable
             config.allow.rfc3927: enable
             tm.tcpudptxchecksum: Software-only
+            ui.advisory.color: green
+            ui.advisory.enabled: true
           My_Provisioning:
             class: Provision
             ltm: nominal
