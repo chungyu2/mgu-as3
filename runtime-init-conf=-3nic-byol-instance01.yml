@@ -31,7 +31,7 @@ extension_services:
             tm.tcpudptxchecksum: Software-only
             ui.advisory.color: green
             ui.advisory.enabled: true
-            ui.advisory.text: /Common/hostname
+            ui.advisory.text: "/Common/hostname"
           My_Provisioning:
             class: Provision
             ltm: nominal
