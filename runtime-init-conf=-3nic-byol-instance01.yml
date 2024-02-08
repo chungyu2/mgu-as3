@@ -31,7 +31,6 @@ extension_services:
             tm.tcpudptxchecksum: Software-only
             ui.advisory.color: green
             ui.advisory.enabled: true
-            ui.advisory.text: aro-f5adc-01.local
           My_Provisioning:
             class: Provision
             ltm: nominal
