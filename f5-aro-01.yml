@@ -156,7 +156,7 @@ extension_services:
           license
         Common:
           class: Tenant
-           My_DbVariables:
+          My_DbVariables:
             class: DbVariables
             dhclient.mgmt: disable
             config.allow.rfc3927: enable
