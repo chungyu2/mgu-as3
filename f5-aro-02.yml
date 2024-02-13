@@ -29,8 +29,6 @@ extension_services:
             dhclient.mgmt: disable
             config.allow.rfc3927: enable
             tm.tcpudptxchecksum: Software-only
-            ui.advisory.color: green
-            ui.advisory.text: "f5-aro-adc"
           Authentication:
             class: Authentication
             enabledSourceType: radius
